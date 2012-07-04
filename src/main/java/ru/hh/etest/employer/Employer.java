@@ -19,7 +19,6 @@ public class Employer {
   private String mcpPosition;
   private String[] phone;
   private String howKnowAboutUs;
-  private String employerCategoryDescription;
   private String inn;
 
   public Employer() {

@@ -11,11 +11,11 @@ public class createEmployer extends AbstractTestRunner{
 	
 	public createEmployer(String server) {
 		driver = runDiver(server);
-		createEmployer(server);
+		createSimilarEmployer(server);
 		driver.quit();
 	}
 
-	private void createEmployer(String server) {
+	private void createSimilarEmployer(String server) {
 		Employer employerData = new Employer();
 	    new EmployerBuilder().createNewEmployer(employerData, driver, true);
 	    ImapMailClient client;
