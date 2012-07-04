@@ -19,19 +19,13 @@ public class EmployerAction {
 		}else{
 			count = 1;
 		}
-		if(action.equals("createApplicant")){
+		if(action.equals("createEmployer")){
 			message = "Сделано! </p>";
 			for(int i=0; i < count; i++){	
 				message = message + new createEmployer(server).getMessage();
 			}
 			
 		}
-		
-		action = request.getParameter("action");
-		server = request.getParameter("server");
-		if(action.equals("createEmployer")){
-			message = new createEmployer(server).getMessage();
-		}	
 	}
 
 	public String getMessage() {
