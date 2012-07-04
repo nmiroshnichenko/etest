@@ -6,6 +6,12 @@
 	<% pageContext.include(request.getParameter("userType") + "Actions.jsp"); %>
 	</select>
 	<p></p>
+	<h4>Сколько?</h4>
+	<p></p>
+	<select name="count">
+	<%for(int i=1; i<11; i++) out.println("<option value='" + i + "'>" + i + "</option>");%>
+	</select>
+	<p></p>
 	<h4>Где будем делать?</h4>
 	<select name="server">
 	<% pageContext.include("serverList.jsp"); %>

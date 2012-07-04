@@ -26,7 +26,7 @@ public class CreateApplicant extends AbstractTestRunner{
 		    driver.typeByXpath(Xpath.inputByParentDivText("Пароль"), applicantInfo.getPassword());
 		    driver.waitForElementPresent("//input[@value='Зарегистрироваться'][not(@disabled)]", 5);
 		    driver.clickInputByValueAndWait("Зарегистрироваться");
-		    this.message = ("Соискатель зарегистрирован! </p> Логин: " + applicantInfo.getEmail() + " </p> Пароль: " + applicantInfo.getPassword());
+		    this.message = ("Соискатель: </p> Логин: " + applicantInfo.getEmail() + " </p> Пароль: " + applicantInfo.getPassword() + "</p></p>");
 		    
 	}
 

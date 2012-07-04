@@ -15,8 +15,6 @@ import ru.hh.etest.actions.EmployerAction;
 public class Go extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private String type;
-	private String action;
-	private String server;
 	private String message;
        
 	

@@ -26,7 +26,7 @@ public class createEmployer extends AbstractTestRunner{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	    this.message = "Работодатель зарегистрирован! </p> Логин: " + employerData.getMcp().getEmail() + " <p> Пароль: " + employerPassword;
+	    this.message = "Работодатель: </p> Логин: " + employerData.getMcp().getEmail() + " <p> Пароль: " + employerPassword  + "</p></p>";
 	}
 
 	public String getMessage() {
