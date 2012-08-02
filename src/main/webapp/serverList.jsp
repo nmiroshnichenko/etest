@@ -11,6 +11,7 @@
 <option value="panda">panda.pyn.ru</option>
 <option value="phoenix">phoenix.pyn.ru</option>
 <option value="slowpoke">slowpoke.pyn.ru</option>
+<option value="sre">sre.pyn.ru</option>
 <option value="suslik">suslik.pyn.ru</option>
 <option value="termit">termit.pyn.ru</option>
 <option value="titan">titan.pyn.ru</option>
