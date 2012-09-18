@@ -2,8 +2,6 @@ package ru.hh.etest.actions;
 
 import javax.servlet.http.HttpServletRequest;
 
-import ru.hh.etest.applicant.CreateApplicant;
-
 public class ApplicantAction {
 	private String message;
 	private String action;
@@ -11,24 +9,29 @@ public class ApplicantAction {
 	private int count;
 
 	public ApplicantAction(HttpServletRequest request) {
+        message = "";
 		action = request.getParameter("action");
 		server = request.getParameter("server");
-		int countString = Integer.parseInt(request.getParameter("count"));
-		if(countString > 0 && countString < 100){
-			count = countString;
-		}else{
+		count = Integer.parseInt(request.getParameter("count"));
+		doApplicantAction();
+	}
+
+	public String getMessage() {
+		return this.message;
+	}
+
+	private void doApplicantAction() {
+		String[] taskArgs = {server};
+
+		if(count < 1 || count > 100){
 			count = 1;
 		}
-		if(action.equals("createApplicant")){
-			message = "Сделано! </p>";
-			for(int i=0; i < count; i++){	
-				message = message + new CreateApplicant(server).getMessage();
-			}
-			
-		}
-		
-	}
-	public String getMessage() {
-		return message;
+		// execute task and get result text
+		Invoker invoker = new Invoker();
+		this.message = "<p>Результат:</p>\n";
+		this.message = this.message
+			+ "| # | Роль | Логин | Пароль |<br />\n";
+		this.message = (this.message 
+			+ invoker.getResultText(action, taskArgs, count));
 	}
 }
